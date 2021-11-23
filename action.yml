@@ -21,11 +21,14 @@ runs:
         $SentenceTrimmed = $SentenceTrimmed `
           -replace "f","ᚠ" `
           -replace "u","ᚢ" `
+          -replace "ú","ᚢ" `
           -replace "þ","ᚦ" `
           -replace "a","ᚨ" `
+          -replace "á","ᚨ" `
           -replace "æ","ᚨᛖ" `
           -replace "r","ᚱ" `
           -replace "k","ᚲ" `
+          -replace "c","ᚲ" `
           -replace "g","ᚷ" `
           -replace "w","ᚹ" `
           -replace "h","ᚺ" `
@@ -40,11 +43,13 @@ runs:
           -replace "t","ᛏ" `
           -replace "t","ᛒ" `
           -replace "e","ᛖ" `
+          -replace "é","ᛖ" `
           -replace "m","ᛗ" `
           -replace "l","ᛚ" `
           -replace "ŋ","ᛜ" `
           -replace "d","ᛞ" `
           -replace "ð","ᛞ" `
+          -replace "ó","ᛟ" `
           -replace "o","ᛟ" 
         Write-Host $SentenceTrimmed
         echo "::set-output name=quote::'$SentenceTrimmed'"
