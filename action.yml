@@ -25,5 +25,5 @@ runs:
       shell: pwsh
       run: echo ${{ steps.quoth_the_vikings.outputs.quote }}
 branding:
-  icon: 'cloud'
-  color: 'gray-dark'
+  icon: 'wind'
+  color: 'red'
