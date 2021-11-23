@@ -10,7 +10,7 @@ runs:
   steps:
     - uses: actions/checkout@v2
       with:
-        repository: 'sturlabragason/the_sagas_randomizer'
+        repository: 'sturlabragason/quoth_the_vikings'
     - id: quoth_the_vikings
       run: |
         $Sentence = Get-ChildItem ./all_sagas_text | Get-Random | Get-Content | ? {$_.Length -gt 0} | ? {$_ -notlike "Chapter" -or $_ -notlike "Kapitel" -or $_ -notlike "Kafli" -or $_ -notlike "Kapittel" } | Get-Random
