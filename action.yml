@@ -19,7 +19,7 @@ runs:
         $SentenceTrimmed = $Sentence.trim()
         $SentenceTrimmed = $SentenceTrimmed
         Write-Host $SentenceTrimmed
-        echo "::set-output name=quote::$SentenceTrimmed"
+        echo "::set-output name=quote::"$SentenceTrimmed""
       shell: pwsh
     - name: Check outputs
       shell: pwsh
