@@ -1,0 +1,29 @@
+name: 'quoth_the_vikings'
+description: 'Fetches a random line in a random language from one of the Icelandic Sagas'
+author: 'Sturla Bragason'
+outputs:
+  quote:
+    description: "Viking quote"
+    value: ${{ steps.quoth_the_vikings.outputs.quote }}
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: 'sturlabragason/the_sagas_randomizer'
+    - id: quoth_the_vikings
+      run: |
+        $Sentence = Get-ChildItem ./all_sagas_text | Get-Random | Get-Content | ? {$_.Length -gt 0} | ? {$_ -notlike "Chapter" -or $_ -notlike "Kapitel" -or $_ -notlike "Kafli" -or $_ -notlike "Kapittel" } | Get-Random
+        $Sentence = $Sentence.split(".")
+        $Sentence = $Sentence[0]
+        $SentenceTrimmed = $Sentence.trim()
+        $SentenceTrimmed = $SentenceTrimmed
+        Write-Host $SentenceTrimmed
+        echo "::set-output name=quote::$SentenceTrimmed"
+    - name: Check outputs
+      shell: pwsh
+      run: echo ${{ steps.quoth_the_vikings.outputs.quote }}
+      shell: pwsh
+branding:
+  icon: 'cloud'
+  color: 'gray-dark'
