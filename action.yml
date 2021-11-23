@@ -21,6 +21,7 @@ runs:
         $SentenceTrimmed = $SentenceTrimmed `
           -replace "f","ᚠ" `
           -replace "u","ᚢ" `
+          -replace "v","ᚢ" `
           -replace "ú","ᚢ" `
           -replace "þ","ᚦ" `
           -replace "a","ᚨ" `
