@@ -20,10 +20,10 @@ runs:
         $SentenceTrimmed = $SentenceTrimmed
         Write-Host $SentenceTrimmed
         echo "::set-output name=quote::$SentenceTrimmed"
+      shell: pwsh
     - name: Check outputs
       shell: pwsh
       run: echo ${{ steps.quoth_the_vikings.outputs.quote }}
-      shell: pwsh
 branding:
   icon: 'cloud'
   color: 'gray-dark'
