@@ -18,7 +18,6 @@ runs:
         $Sentence = $Sentence[0]
         $SentenceTrimmed = $Sentence.trim()
         $SentenceTrimmed = $SentenceTrimmed
-        Write-Host $SentenceTrimmed
         $SentenceTrimmed = $SentenceTrimmed `
           -replace "f","ᚠ" `
           -replace "u","ᚢ" `
@@ -44,6 +43,7 @@ runs:
           -replace "ŋ","ᛜ" `
           -replace "d","ᛞ" `
           -replace "o","ᛟ" 
+        Write-Host $SentenceTrimmed
         echo "::set-output name=quote::'$SentenceTrimmed'"
       shell: pwsh
 branding:
