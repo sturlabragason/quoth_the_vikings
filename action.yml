@@ -19,6 +19,31 @@ runs:
         $SentenceTrimmed = $Sentence.trim()
         $SentenceTrimmed = $SentenceTrimmed
         Write-Host $SentenceTrimmed
+        $SentenceTrimmed = $SentenceTrimmed `
+          -replace "f","ᚠ" `
+          -replace "u","ᚢ" `
+          -replace "þ","ᚦ" `
+          -replace "a","ᚨ" `
+          -replace "r","ᚱ" `
+          -replace "k","ᚲ" `
+          -replace "g","ᚷ" `
+          -replace "w","ᚹ" `
+          -replace "h","ᚺ" `
+          -replace "n","ᚾ" `
+          -replace "i","ᛁ" `
+          -replace "j","ᛃ" `
+          -replace "p","ᛈ" `
+          -replace "ï","ᛇ" `
+          -replace "z","ᛉ" `
+          -replace "s","ᛊ" `
+          -replace "t","ᛏ" `
+          -replace "t","ᛒ" `
+          -replace "e","ᛖ" `
+          -replace "m","ᛗ" `
+          -replace "l","ᛚ" `
+          -replace "ŋ","ᛜ" `
+          -replace "d","ᛞ" `
+          -replace "o","ᛟ" `
         echo "::set-output name=quote::'$SentenceTrimmed'"
       shell: pwsh
 branding:
