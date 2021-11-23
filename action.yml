@@ -23,6 +23,7 @@ runs:
           -replace "u","ᚢ" `
           -replace "þ","ᚦ" `
           -replace "a","ᚨ" `
+          -replace "æ","ᚨᛖ" `
           -replace "r","ᚱ" `
           -replace "k","ᚲ" `
           -replace "g","ᚷ" `
@@ -30,6 +31,7 @@ runs:
           -replace "h","ᚺ" `
           -replace "n","ᚾ" `
           -replace "i","ᛁ" `
+          -replace "í","ᛁ" `
           -replace "j","ᛃ" `
           -replace "p","ᛈ" `
           -replace "ï","ᛇ" `
@@ -42,6 +44,7 @@ runs:
           -replace "l","ᛚ" `
           -replace "ŋ","ᛜ" `
           -replace "d","ᛞ" `
+          -replace "ð","ᛞ" `
           -replace "o","ᛟ" 
         Write-Host $SentenceTrimmed
         echo "::set-output name=quote::'$SentenceTrimmed'"
