@@ -8,3 +8,6 @@ jobs:
     steps:
       - id: quoth_the_vikings
         uses: sturlabragason/quoth_the_vikings@main
+      - name: Check outputs
+        shell: pwsh
+        run: echo ${{ steps.quoth_the_vikings.outputs.quote }}
