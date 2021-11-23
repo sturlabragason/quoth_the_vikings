@@ -1,0 +1,10 @@
+name: Quoth The Vikings
+on: [push]
+
+jobs:
+  terraform_default_job:
+    runs-on: ubuntu-latest
+    name: Using quoth_the_vikings action
+    steps:
+      - id: quoth_the_vikings
+        uses: sturlabragason/quoth_the_vikings@main
