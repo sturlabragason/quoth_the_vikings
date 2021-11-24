@@ -13,49 +13,56 @@ runs:
         repository: 'sturlabragason/quoth_the_vikings'
     - id: quoth_the_vikings
       run: |
-        $Sentence = Get-ChildItem ./all_sagas_text | Get-Random | Get-Content | ? {$_.Length -gt 0} | ? {$_ -notlike "Chapter" -or $_ -notlike "Kapitel" -or $_ -notlike "Kafli" -or $_ -notlike "Kapittel" } | Get-Random
+        $Sentence = Get-ChildItem ./all_sagas_text | Get-Random | Get-Content | ? {$_.Length -gt 0} | ? {$_ -notlike "*Chapter*" -or $_ -notlike "*Kapitel*" -or $_ -notlike "*Kafli*" -or $_ -notlike "*Kapittel*" } | Get-Random
         $Sentence = $Sentence.split(".")
         $Sentence = $Sentence[0]
         $SentenceTrimmed = $Sentence.trim()
         $SentenceTrimmed = $SentenceTrimmed
         $SentenceTrimmed = $SentenceTrimmed `
-          -replace "f","ᚠ" `
-          -replace "u","ᚢ" `
-          -replace "v","ᚢ" `
-          -replace "ú","ᚢ" `
-          -replace "þ","ᚦ" `
-          -replace "a","ᚨ" `
-          -replace "á","ᚨ" `
-          -replace "æ","ᚨᛖ" `
-          -replace "r","ᚱ" `
-          -replace "k","ᚲ" `
-          -replace "q","ᚲ" `
-          -replace "c","ᚲ" `
-          -replace "g","ᚷ" `
-          -replace "w","ᚹ" `
-          -replace "h","ᚺ" `
-          -replace "n","ᚾ" `
-          -replace "i","ᛁ" `
-          -replace "y","ᛁ" `
-          -replace "í","ᛁ" `
-          -replace "j","ᛃ" `
-          -replace "p","ᛈ" `
-          -replace "b","ᛈ" `
-          -replace "ï","ᛇ" `
-          -replace "z","ᛉ" `
-          -replace "s","ᛊ" `
-          -replace "t","ᛏ" `
-          -replace "t","ᛒ" `
-          -replace "e","ᛖ" `
-          -replace "é","ᛖ" `
-          -replace "m","ᛗ" `
-          -replace "l","ᛚ" `
-          -replace "ŋ","ᛜ" `
-          -replace "d","ᛞ" `
-          -replace "ð","ᛞ" `
-          -replace "ó","ᛟ" `
-          -replace "ö","ᛟ" `
-          -replace "o","ᛟ" 
+            -replace "f","ᚠ" `
+            -replace "u","ᚢ" `
+            -replace "v","ᚢ" `
+            -replace "ú","ᚢ" `
+            -replace "þ","ᚦ" `
+            -replace "a","ᚨ" `
+            -replace "á","ᚨ" `
+            -replace "æ","ᚨᛖ" `
+            -replace "r","ᚱ" `
+            -replace "k","ᚲ" `
+            -replace "q","ᚲ" `
+            -replace "c","ᚲ" `
+            -replace "g","ᚷ" `
+            -replace "w","ᚹ" `
+            -replace "h","ᚺ" `
+            -replace "n","ᚾ" `
+            -replace "i","ᛁ" `
+            -replace "y","ᛁ" `
+            -replace "í","ᛁ" `
+            -replace "j","ᛃ" `
+            -replace "p","ᛈ" `
+            -replace "b","ᛈ" `
+            -replace "ï","ᛇ" `
+            -replace "z","ᛉ" `
+            -replace "s","ᛊ" `
+            -replace "t","ᛏ" `
+            -replace "t","ᛒ" `
+            -replace "e","ᛖ" `
+            -replace "ä","ᛖ" `
+            -replace "é","ᛖ" `
+            -replace "m","ᛗ" `
+            -replace "l","ᛚ" `
+            -replace "ŋ","ᛜ" `
+            -replace "�","ᛜ" `
+            -replace "d","ᛞ" `
+            -replace "ð","ᛞ" `
+            -replace "ó","ᛟ" `
+            -replace "ö","ᛟ" `
+            -replace "å","ᛟ" `
+            -replace "\?","" `
+            -replace "\`"","" `
+            -replace "\,","" `
+            -replace "»","" `
+            -replace "o","ᛟ" 
         Write-Host $SentenceTrimmed
         echo "::set-output name=quote::'$SentenceTrimmed'"
       shell: pwsh
