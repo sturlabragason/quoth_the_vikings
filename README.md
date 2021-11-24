@@ -1,4 +1,4 @@
-# quoth_the_vikings
+# quoth_the_vikings :goberserk: ᚲᚢᛟᛏᚺ_ᛏᚺᛖ_ᚹᛁᚲᛁᚾᚷᛋ :goberserk:
 The quoth_the_vikings action is an action that plucks a random sentence from one the Icelandic Sagas. :godmode:
 
 :suspect: [![Quoth The Vikings](https://github.com/sturlabragason/quoth_the_vikings/actions/workflows/quoth.yml/badge.svg)](https://github.com/sturlabragason/quoth_the_vikings/actions/workflows/quoth.yml) :suspect:
