@@ -35,9 +35,11 @@ runs:
           -replace "h","ᚺ" `
           -replace "n","ᚾ" `
           -replace "i","ᛁ" `
+          -replace "y","ᛁ" `
           -replace "í","ᛁ" `
           -replace "j","ᛃ" `
           -replace "p","ᛈ" `
+          -replace "b","ᛈ" `
           -replace "ï","ᛇ" `
           -replace "z","ᛉ" `
           -replace "s","ᛊ" `
