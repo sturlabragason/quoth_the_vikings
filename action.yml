@@ -29,6 +29,7 @@ runs:
           -replace "æ","ᚨᛖ" `
           -replace "r","ᚱ" `
           -replace "k","ᚲ" `
+          -replace "q","ᚲ" `
           -replace "c","ᚲ" `
           -replace "g","ᚷ" `
           -replace "w","ᚹ" `
