@@ -18,7 +18,7 @@
 - :suspect: First off, it downloads ALL of the icelandic sagas from [`sturlabragason/quoth_the_vikings`](https://github.com/sturlabragason/quoth_the_vikings)! :suspect:
 - :hurtrealbad: It then picks a random sentence from a random saga, in a random language! :hurtrealbad:
 - :rage1: It then replaces all letters of the latin alphabet with the ELDER FUTHARK! :rage1:
-- :goberserk: Voila, use the output as you please: they make great automated commit messages, git tags or anything at all! :goberserk:
+- :goberserk: Use the output as you please: they make great automated commit messages, git tags or anything at all! :goberserk:
 
 
 ## :rage4: Usage :rage4:
@@ -35,6 +35,6 @@
         run: echo ${{ steps.quoth_the_vikings.outputs.quote }}
 ```
 
-## License :finnadie:
+## :finnadie: License :finnadie:
 
 [GNU General Public License v3.0](https://github.com/sturlabragason/quoth_the_vikings/blob/main/LICENSE)
