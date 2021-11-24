@@ -53,6 +53,7 @@ runs:
           -replace "d","ᛞ" `
           -replace "ð","ᛞ" `
           -replace "ó","ᛟ" `
+          -replace "ö","ᛟ" `
           -replace "o","ᛟ" 
         Write-Host $SentenceTrimmed
         echo "::set-output name=quote::'$SentenceTrimmed'"
