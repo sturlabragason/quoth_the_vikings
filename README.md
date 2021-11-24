@@ -1,7 +1,7 @@
 # quoth_the_vikings
 The quoth_the_vikings action is an action that plucks a random sentence from one the Icelandic Sagas. :godmode:
 
-[![Quoth The Vikings](https://github.com/sturlabragason/quoth_the_vikings/actions/workflows/quoth.yml/badge.svg)](https://github.com/sturlabragason/quoth_the_vikings/actions/workflows/quoth.yml)
+:suspect: [![Quoth The Vikings](https://github.com/sturlabragason/quoth_the_vikings/actions/workflows/quoth.yml/badge.svg)](https://github.com/sturlabragason/quoth_the_vikings/actions/workflows/quoth.yml) :suspect:
 `#actionshackathon21`
 
 The [`sturlabragason/quoth_the_vikings`](https://github.com/sturlabragason/quoth_the_vikings) action is a composite action that grabs a random line in a random language from one of the Icelandic sagas. It incorporates the action: [`actions/checkout@v2`](https://github.com/actions/checkout).
@@ -13,7 +13,7 @@ The [`sturlabragason/quoth_the_vikings`](https://github.com/sturlabragason/quoth
 > Eigi erut rúnir ristar úr letri Væringja!
 > Gerit menn þá allir, sem þeir skyldu met þulu þessa, gerist glaðir, ellegar notið til níðs!
 
-## :rocket: What this action does (in plain english): :rocket:
+## :rocket: :rage4: What this action does (in plain english): :rocket: :rage3:
 
 - :suspect: First off, it downloads ALL of the icelandic sagas from [`sturlabragason/quoth_the_vikings`](https://github.com/sturlabragason/quoth_the_vikings)!
 - :hurtrealbad: It then picks a random sentence from a random saga, in a random language!
@@ -21,7 +21,7 @@ The [`sturlabragason/quoth_the_vikings`](https://github.com/sturlabragason/quoth
 - :goberserk: Voila, use the output as you please: they make great automated commit messages, git tags or anything at all!
 
 
-## Usage
+## Usage :goberserk:
 
 ```yaml
 jobs:
@@ -35,6 +35,6 @@ jobs:
         run: echo ${{ steps.quoth_the_vikings.outputs.quote }}
 ```
 
-## License
+## License :finnadie:
 
 [GNU General Public License v3.0](https://github.com/sturlabragason/quoth_the_vikings/blob/main/LICENSE)
